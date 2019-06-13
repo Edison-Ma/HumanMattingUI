@@ -4,9 +4,9 @@ from PySide2.QtWidgets import (QApplication, QLabel, QPushButton,
 from PySide2.QtCore import Slot, Qt, QSize
 from PySide2.QtGui import QPixmap, QImage, QCursor
 
-class Example(QWidget):        
+class Example(QWidget):
     def __init__(self):
-        super(Example, self).__init__()            
+        super(Example, self).__init__()
         self.initUI()
         self.keyPressed = False
 
@@ -24,19 +24,19 @@ class Example(QWidget):
         cursor = QCursor()
         print(cursor.pos())
 
-    def initUI(self):                           
+    def initUI(self):
         qbtn = QPushButton('Quit', self)
         qbtn.resize(qbtn.sizeHint())
-        qbtn.move(50, 50)       
+        qbtn.move(50, 50)
 
         self.setGeometry(0, 0, 1024, 768)
-        self.setWindowTitle('Quit button')    
+        self.setWindowTitle('Quit button')
         self.setWindowFlags(self.windowFlags() | Qt.FramelessWindowHint)
         self.show()
     def test(self):
       print("test")
 
-def main():        
+def main():
     app = QApplication(sys.argv)
     ex = Example()
     ex.show()

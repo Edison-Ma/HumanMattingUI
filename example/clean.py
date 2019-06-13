@@ -49,7 +49,7 @@ class Example(QtGui.QWidget):
 
     self.move(300,200)
     self.setWindowTitle('Choose which picture you like more')
-    self.show()  
+    self.show()
 
   def next(self):
       self.pageNumber += 1
